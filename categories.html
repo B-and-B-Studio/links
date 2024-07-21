@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="links.html">Links</a>
+    </nav>
+    <main>
+        <h1>Categories</h1>
+        <button id="show-add-category-popup">Add Category</button>
+        <button id="export-categories">Export Categories</button>
+        <input type="file" id="import-categories" style="display: none;">
+        <button id="import-categories-btn">Import Categories</button>
+        <div id="categories-list" class="grid-container"></div>
+    </main>
+    <div id="add-category-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="add-category-form">
+                <input type="hidden" id="category-id" name="category-id">
+                <label for="category-name">Category Name:</label>
+                <input type="text" id="category-name" name="category-name" required>
+                <button type="submit">Submit</button>
+                <button type="button" id="cancel-category-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/categories.js"></script>
+</body>
+
+</html>

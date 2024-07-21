@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="links.html">Links</a>
+    </nav>
+    <main>
+        <h1>Link Manager</h1>
+        <button id="show-add-link-popup">Add Link</button>
+        <div id="add-link-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <form id="add-link-form">
+                    <input type="hidden" id="link-id" name="link-id">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required></select>
+                    <label for="link-name">Link Name:</label>
+                    <input type="text" id="link-name" name="link-name" required>
+                    <label for="link-url">Link URL:</label>
+                    <input type="url" id="link-url" name="link-url" required>
+                    <button type="submit">Submit</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div id="categories-grid" class="grid-container"></div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
